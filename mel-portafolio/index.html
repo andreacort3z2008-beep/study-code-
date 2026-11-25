@@ -1,0 +1,2181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrea Melissa Mejía Cortez — Portafolio</title>
+
+<!-- Fuentes Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Montserrat:wght@300;400;500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   PALETA ORIGINAL + POLKA DOTS
+   ============================================================ */
+:root {
+  --cream:       #F7F1E5;
+  --cream-2:     #F5EFE6;
+  --burgundy:    #4A0E17;
+  --burgundy-2:  #58111A;
+  --rose:        #D9A2A8;
+  --rose-light:  #EED0D4;
+  --rose-soft:   #FBEAEE;
+  --rose-deep:   #C88EA7;
+  --ink:         #2B1A1E;
+  --ink-muted:   #5C4248;
+  --paper:       #FFFFFF;
+  --tape:        rgba(217, 162, 168, 0.58);
+  --shadow:      rgba(74, 14, 23, 0.14);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* Polka dots suaves sobre el crema original */
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(rgba(200, 142, 167, 0.34) 2.3px, transparent 2.3px),
+    radial-gradient(rgba(74, 14, 23, 0.11) 1.6px, transparent 1.6px);
+  background-size: 34px 34px;
+  background-position: 0 0, 17px 17px;
+}
+
+/* Superficies Polka Dots en la paleta original */
+.dots-cream {
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(rgba(200, 142, 167, 0.32) 2.2px, transparent 2.2px),
+    radial-gradient(rgba(74, 14, 23, 0.10) 1.5px, transparent 1.5px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.dots-rose {
+  background-color: #E9C1C6;
+  background-image:
+    radial-gradient(rgba(74, 14, 23, 0.20) 2.3px, transparent 2.3px),
+    radial-gradient(rgba(247, 241, 229, 0.65) 1.9px, transparent 1.9px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+.dots-burgundy {
+  background-color: var(--burgundy);
+  background-image:
+    radial-gradient(rgba(217, 162, 168, 0.26) 2.2px, transparent 2.2px),
+    radial-gradient(rgba(247, 241, 229, 0.14) 1.5px, transparent 1.5px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  color: var(--cream);
+}
+
+/* ============================================================
+   UTILIDADES & TIPOGRAFÍA
+   ============================================================ */
+.wrap {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 72px);
+}
+main { flex: 1; }
+
+.script { font-family: 'Great Vibes', cursive; font-weight: 400; }
+.serif { font-family: 'Playfair Display', serif; }
+.serif-it { font-family: 'Playfair Display', serif; font-style: italic; }
+.typewriter { font-family: 'Courier Prime', monospace; }
+
+.section-block { padding: 64px 0 80px; }
+
+/* Encabezado de sección */
+.section-title {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  margin-bottom: 38px; text-align: center;
+}
+.section-title h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(40px, 6vw, 58px);
+  color: var(--burgundy);
+  line-height: 1.08;
+}
+.section-title p {
+  font-family: 'Courier Prime', monospace;
+  font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--rose-deep);
+}
+.bow-divider { display: flex; align-items: center; gap: 14px; justify-content: center; }
+.bow-divider .line { width: 68px; height: 1px; background: var(--burgundy); opacity: .35; }
+
+/* Banda decorativa polka dots entre bloques */
+.dot-band {
+  height: 22px;
+  background-color: var(--rose-light);
+  background-image:
+    radial-gradient(var(--burgundy) 2.2px, transparent 2.2px),
+    radial-gradient(var(--paper) 1.8px, transparent 1.8px);
+  background-size: 22px 22px;
+  background-position: 0 0, 11px 11px;
+  border-top: 1px solid var(--burgundy);
+  border-bottom: 1px solid var(--burgundy);
+  opacity: .92;
+}
+
+/* Tarjetas estilo editorial / scrapbook */
+.card {
+  background: var(--paper);
+  border: 1px solid var(--burgundy);
+  border-radius: 16px;
+  padding: 28px;
+  position: relative;
+  box-shadow: 5px 5px 0 rgba(74, 14, 23, 0.12);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 8px 8px 0 rgba(74, 14, 23, 0.16);
+}
+
+/* Cinta adhesiva decorativa */
+.tape {
+  position: absolute; top: -12px; left: 50%;
+  width: 90px; height: 22px;
+  transform: translateX(-50%) rotate(-2.5deg);
+  background: var(--tape);
+  border-left: 1px dashed rgba(74, 14, 23, .28);
+  border-right: 1px dashed rgba(74, 14, 23, .28);
+  z-index: 3;
+}
+
+/* Etiquetas */
+.tag {
+  display: inline-block;
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--burgundy);
+  background: var(--cream-2);
+  border: 1px solid var(--burgundy);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+.tag-rose { background: var(--rose); color: var(--paper); border-color: var(--burgundy); }
+.tag-burgundy { background: var(--burgundy); color: var(--cream); border-color: var(--burgundy); }
+
+/* Botones */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Courier Prime', monospace;
+  font-size: 14px; font-weight: 700; letter-spacing: 0.4px;
+  color: var(--paper);
+  background: var(--burgundy);
+  border: 1px solid var(--burgundy);
+  border-radius: 999px;
+  padding: 13px 26px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .18s ease, color .18s ease, transform .18s ease;
+}
+.btn:hover { background: var(--paper); color: var(--burgundy); transform: translateY(-1px); }
+.btn-ghost { background: var(--paper); color: var(--burgundy); }
+.btn-ghost:hover { background: var(--burgundy); color: var(--paper); }
+.btn-sm { padding: 10px 18px; font-size: 12.5px; }
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar {
+  position: sticky; top: 0; z-index: 60;
+  background: rgba(247, 241, 229, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--burgundy);
+}
+.navbar-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 15px clamp(24px, 5vw, 72px); max-width: 1320px; margin: 0 auto; gap: 16px;
+}
+.logo {
+  font-family: 'Courier Prime', monospace;
+  font-weight: 700; letter-spacing: 3px;
+  color: var(--burgundy); font-size: 16px;
+  text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.nav-links { display: flex; gap: 10px; list-style: none; flex-wrap: wrap; }
+.nav-links a {
+  font-family: 'Courier Prime', monospace;
+  font-size: 13px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--ink); text-decoration: none;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: all .2s ease;
+}
+.nav-links a:hover {
+  color: var(--burgundy);
+  background: var(--rose-soft);
+  border-color: rgba(74, 14, 23, 0.25);
+}
+.nav-links a.active {
+  background: var(--burgundy);
+  color: var(--cream);
+  border-color: var(--burgundy);
+}
+@media (max-width: 720px) {
+  .navbar-inner { flex-direction: column; gap: 10px; padding: 12px 16px; }
+  .nav-links { justify-content: center; gap: 8px; }
+  .nav-links a { padding: 6px 12px; font-size: 12px; }
+}
+
+/* ============================================================
+   SISTEMA DE VISTAS POR LINK + ANIMACIONES SCROLL REVEAL
+   ============================================================ */
+.view-section {
+  display: none;
+}
+.view-section.active {
+  display: block;
+  animation: viewFadeIn 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes viewFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll reveal: aparece suavemente al deslizar hacia abajo */
+.reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.22s ease;
+}
+.reveal.reveal-left { transform: translateX(-28px); }
+.reveal.reveal-right { transform: translateX(28px); }
+.reveal.reveal-scale { transform: scale(0.95) translateY(20px); }
+
+.reveal.visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+.reveal[data-delay="1"] { transition-delay: 0.08s; }
+.reveal[data-delay="2"] { transition-delay: 0.16s; }
+.reveal[data-delay="3"] { transition-delay: 0.24s; }
+.reveal[data-delay="4"] { transition-delay: 0.32s; }
+
+/* ============================================================
+   VISTA 1: INICIO (QUIÉN SOY YO + HABILIDADES)
+   ============================================================ */
+.hero-wrap { padding: 42px 0 54px; }
+
+.hero-board {
+  display: grid;
+  grid-template-columns: 1.28fr 0.95fr;
+  border: 1px solid var(--burgundy);
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--paper);
+  box-shadow: 7px 7px 0 rgba(74, 14, 23, 0.14);
+}
+@media (max-width: 880px) {
+  .hero-board { grid-template-columns: 1fr; }
+}
+
+.hero-left {
+  padding: 54px 48px;
+  display: flex; flex-direction: column; justify-content: center;
+  background: var(--paper);
+  position: relative;
+}
+@media (max-width: 600px) { .hero-left { padding: 34px 24px; } }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Courier Prime', monospace; font-size: 12px;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--burgundy);
+  background: var(--rose-soft);
+  border: 1px solid rgba(74, 14, 23, 0.28);
+  border-radius: 999px;
+  padding: 5px 14px;
+  margin-bottom: 18px;
+  align-self: flex-start;
+}
+
+.hero-left h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(50px, 6.8vw, 82px);
+  color: var(--burgundy);
+  line-height: 0.98;
+  margin-bottom: 10px;
+}
+.hero-left h1 .and { color: var(--rose-deep); }
+
+.hero-sub {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: clamp(17px, 2.2vw, 22px);
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+
+.hero-quote {
+  font-family: 'Courier Prime', monospace; font-size: 13.5px;
+  border-left: 3px solid var(--rose-deep);
+  background: var(--cream-2);
+  padding: 12px 16px;
+  border-radius: 0 10px 10px 0;
+  margin-bottom: 26px;
+  color: var(--ink);
+}
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+/* Lado derecho del hero con Polka Dots Rosado */
+.hero-right {
+  padding: 42px 28px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  position: relative;
+  border-left: 1px solid var(--burgundy);
+}
+@media (max-width: 880px) {
+  .hero-right { border-left: none; border-top: 1px solid var(--burgundy); padding: 38px 24px; }
+}
+
+.polaroid {
+  background: var(--paper);
+  border: 1px solid var(--burgundy);
+  padding: 16px 16px 20px;
+  transform: rotate(2deg);
+  box-shadow: 6px 7px 0 rgba(74, 14, 23, .18);
+  max-width: 315px; width: 100%;
+  position: relative;
+  transition: transform .25s ease;
+}
+.polaroid:hover { transform: rotate(0deg) scale(1.02); }
+.polaroid-frame {
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid var(--burgundy);
+  background: var(--cream-2);
+  position: relative;
+  cursor: zoom-in;
+}
+.polaroid-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+  display: block;
+  transition: transform .35s ease;
+}
+.polaroid-frame:hover img { transform: scale(1.04); }
+.zoom-pill {
+  position: absolute; bottom: 10px; right: 10px;
+  font-family: 'Courier Prime', monospace; font-size: 11px;
+  background: rgba(247, 241, 229, 0.92); color: var(--burgundy);
+  border: 1px solid var(--burgundy); border-radius: 999px;
+  padding: 3px 10px;
+  pointer-events: none;
+}
+.polaroid-caption {
+  text-align: center; margin-top: 12px;
+  font-family: 'Great Vibes', cursive; font-size: 24px; color: var(--burgundy);
+}
+
+.hero-mini-notes {
+  display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+  margin-top: 20px;
+}
+.mini-note {
+  font-family: 'Courier Prime', monospace; font-size: 11.5px;
+  background: var(--paper); color: var(--burgundy);
+  border: 1px solid var(--burgundy);
+  border-radius: 999px; padding: 5px 12px;
+  box-shadow: 2px 2px 0 rgba(74, 14, 23, 0.14);
+}
+
+/* Quién soy yo (Grid asimétrico 2 columnas) */
+.about-split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  align-items: stretch;
+}
+@media (max-width: 820px) { .about-split { grid-template-columns: 1fr; } }
+
+.about-story {
+  border: 1px solid var(--burgundy);
+  border-radius: 18px;
+  padding: 34px 32px;
+  position: relative;
+  box-shadow: 6px 6px 0 rgba(74, 14, 23, 0.16);
+  display: flex; flex-direction: column; justify-content: center; gap: 16px;
+}
+.about-story h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 42px; color: var(--rose-light); line-height: 1.05;
+}
+.about-story p { font-size: 14.5px; color: var(--cream); opacity: 0.95; }
+.about-story .sticker-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+.sticker-light {
+  font-family: 'Courier Prime', monospace; font-size: 12px;
+  background: var(--cream); color: var(--burgundy);
+  border: 1px solid var(--rose);
+  border-radius: 8px; padding: 6px 12px;
+}
+
+.about-ficha {
+  background: var(--paper);
+  border: 1px solid var(--burgundy);
+  border-radius: 18px;
+  padding: 30px 28px;
+  position: relative;
+  box-shadow: 6px 6px 0 rgba(74, 14, 23, 0.12);
+}
+.about-ficha-header {
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px dashed rgba(74, 14, 23, 0.3);
+  padding-bottom: 12px; margin-bottom: 16px;
+}
+.about-ficha-header span {
+  font-family: 'Courier Prime', monospace; font-size: 12px;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--burgundy);
+  font-weight: 700;
+}
+.ficha-list { list-style: none; display: flex; flex-direction: column; gap: 13px; }
+.ficha-list li {
+  display: flex; flex-direction: column; gap: 2px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted rgba(74, 14, 23, 0.18);
+}
+.ficha-list li:last-child { border-bottom: none; padding-bottom: 0; }
+.ficha-label {
+  font-family: 'Courier Prime', monospace; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.4px; color: var(--rose-deep);
+}
+.ficha-val { font-size: 14px; font-weight: 500; color: var(--ink); }
+
+/* Hobbies y Fortalezas dentro de Sobre mí */
+.about-extras {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 34px;
+}
+
+.extras-card {
+  border: 1px solid var(--burgundy);
+  border-radius: 20px;
+  padding: 34px 32px;
+  position: relative;
+  box-shadow: 6px 6px 0 rgba(74, 14, 23, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.extras-card.hobbies-card { background: var(--paper); }
+.extras-header {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  border-bottom: 1px dashed rgba(74, 14, 23, 0.28);
+  padding-bottom: 14px;
+}
+.extras-header h3 {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 28px; color: var(--burgundy); line-height: 1.15;
+}
+.extras-kicker {
+  font-family: 'Courier Prime', monospace; font-size: 11.5px;
+  text-transform: uppercase; letter-spacing: 1.6px; color: var(--rose-deep);
+  display: block; margin-bottom: 3px;
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.hobby-item {
+  background: var(--cream-2);
+  border: 1px solid var(--burgundy);
+  border-radius: 14px;
+  padding: 18px 18px;
+  display: flex; flex-direction: column; gap: 7px;
+  transition: transform .18s ease, background .18s ease;
+}
+.hobby-item:hover { transform: translateY(-3px); background: var(--rose-soft); }
+.hobby-title {
+  font-family: 'Playfair Display', serif; font-weight: 700;
+  font-size: 17px; color: var(--burgundy);
+  display: flex; align-items: center; gap: 8px;
+}
+.hobby-item p { font-size: 14px; color: var(--ink-muted); line-height: 1.5; }
+
+.strength-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (max-width: 780px) { .strength-list { grid-template-columns: 1fr; } }
+
+.strength-item {
+  background: var(--paper);
+  border: 1px solid var(--burgundy);
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 4px 4px 0 rgba(74, 14, 23, 0.11);
+  display: flex; align-items: flex-start; gap: 14px;
+  transition: transform .18s ease;
+}
+.strength-item:hover { transform: translateY(-2px); }
+.strength-badge {
+  width: 32px; height: 32px; flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--rose-soft); border: 1px solid var(--burgundy);
+  color: var(--burgundy); font-family: 'Courier Prime', monospace;
+  font-size: 13px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 2px;
+}
+.strength-item h4 {
+  font-family: 'Playfair Display', serif; font-size: 18px;
+  color: var(--burgundy); margin-bottom: 4px;
+}
+.strength-item p { font-size: 14px; color: var(--ink-muted); line-height: 1.5; }
+
+/* Habilidades (Herramientas + Creativas) */
+.skills-layout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.25fr;
+  gap: 28px;
+  align-items: start;
+}
+@media (max-width: 900px) { .skills-layout { grid-template-columns: 1fr; } }
+
+.tech-skills-panel {
+  border: 1px solid var(--burgundy);
+  border-radius: 18px;
+  padding: 30px 26px;
+  box-shadow: 6px 6px 0 rgba(74, 14, 23, 0.13);
+  position: relative;
+}
+.panel-kicker {
+  font-family: 'Courier Prime', monospace; font-size: 11.5px;
+  letter-spacing: 1.8px; text-transform: uppercase;
+  color: var(--burgundy); margin-bottom: 6px; font-weight: 700;
+}
+.tech-skills-panel h3 {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 25px; color: var(--burgundy); margin-bottom: 18px;
+}
+
+.tech-stack { display: flex; flex-direction: column; gap: 14px; }
+.tech-item {
+  background: var(--paper);
+  border: 1px solid var(--burgundy);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 3px 3px 0 rgba(74, 14, 23, 0.10);
+  transition: transform .2s ease;
+}
+.tech-item:hover { transform: translateX(4px); }
+.tech-item-top {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 10px; margin-bottom: 6px;
+}
+.tech-name {
+  font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700;
+  color: var(--burgundy);
+}
+.level-pill {
+  font-family: 'Courier Prime', monospace; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1px;
+  background: var(--rose-soft); color: var(--burgundy);
+  border: 1px solid var(--burgundy); border-radius: 999px;
+  padding: 3px 10px; white-space: nowrap;
+}
+.tech-item p { font-size: 13.5px; color: var(--ink-muted); margin-bottom: 10px; }
+.skill-meter {
+  height: 7px; background: var(--cream-2);
+  border: 1px solid rgba(74, 14, 23, 0.3);
+  border-radius: 999px; overflow: hidden;
+}
+.skill-meter-fill {
+  height: 100%; border-radius: 999px;
+  background: linear-gradient(90deg, var(--rose), var(--burgundy));
+}
+
+.soft-skills-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+}
+@media (max-width: 600px) { .soft-skills-grid { grid-template-columns: 1fr; } }
+
+.skill-card {
+  background: var(--paper);
+  border: 1px solid var(--burgundy);
+  border-radius: 16px;
+  padding: 24px 22px;
+  position: relative;
+  box-shadow: 4px 4px 0 rgba(74, 14, 23, 0.11);
+  display: flex; flex-direction: column; gap: 10px;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 7px 7px 0 rgba(74, 14, 23, 0.15);
+}
+.skill-num {
+  position: absolute; top: 14px; right: 18px;
+  font-family: 'Great Vibes', cursive; font-size: 28px; color: var(--rose-deep);
+}
+.skill-icon {
+  width: 46px; height: 46px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--rose-soft); border: 1px solid var(--burgundy);
+}
+.skill-card h4 {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 19px; color: var(--burgundy);
+}
+.skill-card p { font-size: 13.5px; color: var(--ink-muted); }
+
+/* Banner invitación a Proyectos */
+.cta-banner {
+  margin-top: 44px;
+  border: 1px solid var(--burgundy);
+  border-radius: 20px;
+  padding: 32px 36px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+  box-shadow: 6px 6px 0 rgba(74, 14, 23, 0.14);
+}
+.cta-banner h3 {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: clamp(22px, 3vw, 28px); color: var(--burgundy);
+}
+.cta-banner p { font-size: 14px; color: var(--ink); max-width: 560px; margin-top: 4px; }
+
+/* ============================================================
+   VISTA 2: PROYECTOS (ELEGANTE + GALERÍA DE DOC + LIGHTBOX)
+   ============================================================ */
+.projects-intro {
+  max-width: 720px; margin: 0 auto 28px; text-align: center;
+  font-size: 15px; color: var(--ink);
+}
+
+.filter-bar {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  margin-bottom: 40px;
+}
+.filter-btn {
+  font-family: 'Courier Prime', monospace; font-size: 12.5px;
+  text-transform: uppercase; letter-spacing: 1px;
+  background: var(--paper); color: var(--burgundy);
+  border: 1px solid var(--burgundy); border-radius: 999px;
+  padding: 8px 18px; cursor: pointer;
+  transition: all .2s ease;
+}
+.filter-btn:hover { background: var(--rose-soft); }
+.filter-btn.active {
+  background: var(--burgundy); color: var(--cream);
+  box-shadow: 3px 3px 0 rgba(74, 14, 23, 0.2);
+}
+
+.project-showcase-list {
+  display: flex; flex-direction: column; gap: 38px;
+}
+
+.project-showcase {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  background: var(--paper);
+  border: 1px solid var(--burgundy);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 7px 7px 0 rgba(74, 14, 23, 0.13);
+}
+.project-showcase.is-hidden { display: none; }
+.project-showcase.reverse .project-media { order: 2; border-right: none; border-left: 1px solid var(--burgundy); }
+.project-showcase.reverse .project-info { order: 1; }
+
+@media (max-width: 900px) {
+  .project-showcase { grid-template-columns: 1fr; }
+  .project-showcase.reverse .project-media { order: 1; border-left: none; }
+  .project-showcase.reverse .project-info { order: 2; }
+}
+
+.project-media {
+  padding: 24px;
+  border-right: 1px solid var(--burgundy);
+  display: flex; flex-direction: column; gap: 14px;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .project-media { border-right: none; border-bottom: 1px solid var(--burgundy); }
+}
+
+.main-photo-frame {
+  position: relative;
+  border: 1px solid var(--burgundy);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--paper);
+  aspect-ratio: 16 / 10;
+  cursor: zoom-in;
+  box-shadow: 4px 4px 0 rgba(74, 14, 23, 0.12);
+}
+.main-photo-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .35s ease;
+}
+.main-photo-frame:hover img { transform: scale(1.03); }
+.photo-caption-badge {
+  position: absolute; left: 12px; bottom: 12px;
+  background: rgba(247, 241, 229, 0.94);
+  color: var(--burgundy);
+  border: 1px solid var(--burgundy);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-family: 'Courier Prime', monospace; font-size: 11px;
+  max-width: calc(100% - 90px);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.thumb-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(76px, 1fr));
+  gap: 10px;
+}
+.thumb-btn {
+  border: 1px solid var(--burgundy);
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: var(--paper);
+  padding: 0;
+  cursor: zoom-in;
+  position: relative;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.thumb-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 3px 3px 0 rgba(74, 14, 23, 0.22);
+}
+.thumb-btn img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+
+.project-info {
+  padding: 38px 36px;
+  display: flex; flex-direction: column; gap: 16px;
+  justify-content: center;
+}
+.project-meta-top {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+}
+.project-num {
+  font-family: 'Great Vibes', cursive; font-size: 36px; color: var(--rose-deep);
+  line-height: 1;
+}
+.project-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(25px, 2.9vw, 31px);
+  color: var(--burgundy); line-height: 1.2;
+}
+.project-desc { font-size: 15.5px; color: var(--ink); }
+
+.project-highlights {
+  background: var(--cream-2);
+  border: 1px dashed rgba(74, 14, 23, 0.35);
+  border-radius: 12px;
+  padding: 16px 18px;
+  font-size: 14px;
+  display: flex; flex-direction: column; gap: 7px;
+}
+.project-highlights strong { color: var(--burgundy); }
+
+.project-skills-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.mini-pill {
+  font-family: 'Courier Prime', monospace; font-size: 11.5px;
+  background: var(--rose-soft); color: var(--burgundy);
+  border: 1px solid rgba(74, 14, 23, 0.32);
+  border-radius: 999px; padding: 4px 11px;
+}
+
+.project-actions {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px;
+}
+
+/* Reflexión en 3 columnas */
+.reflections-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+  margin-top: 48px;
+}
+@media (max-width: 860px) { .reflections-grid { grid-template-columns: 1fr; } }
+.reflection-card {
+  border: 1px solid var(--burgundy);
+  border-radius: 16px;
+  padding: 24px 22px;
+  background: var(--paper);
+  box-shadow: 4px 4px 0 rgba(74, 14, 23, 0.11);
+  position: relative;
+}
+.reflection-card h4 {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 18px; color: var(--burgundy); margin-bottom: 10px;
+}
+.reflection-card p { font-size: 13.5px; color: var(--ink-muted); }
+
+/* ============================================================
+   VISTA 3: CONTACTO (2 COLUMNAS EDITORIALES)
+   ============================================================ */
+.contact-board {
+  display: grid;
+  grid-template-columns: 0.9fr 1.15fr;
+  border: 1px solid var(--burgundy);
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--paper);
+  box-shadow: 7px 7px 0 rgba(74, 14, 23, 0.14);
+}
+@media (max-width: 840px) { .contact-board { grid-template-columns: 1fr; } }
+
+.contact-aside {
+  padding: 40px 32px;
+  display: flex; flex-direction: column; justify-content: space-between; gap: 24px;
+  border-right: 1px solid var(--burgundy);
+}
+@media (max-width: 840px) {
+  .contact-aside { border-right: none; border-bottom: 1px solid var(--burgundy); }
+}
+.contact-aside h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px; color: var(--rose-light); line-height: 1;
+  margin-bottom: 10px;
+}
+.contact-aside p { font-size: 14.5px; color: var(--cream); opacity: 0.94; }
+.contact-details {
+  list-style: none; display: flex; flex-direction: column; gap: 12px;
+  margin-top: 12px;
+}
+.contact-details li {
+  font-family: 'Courier Prime', monospace; font-size: 13px;
+  color: var(--cream);
+  background: rgba(247, 241, 229, 0.1);
+  border: 1px solid rgba(217, 162, 168, 0.45);
+  border-radius: 10px; padding: 10px 14px;
+}
+
+.contact-form-panel {
+  padding: 40px 34px;
+  background: var(--paper);
+}
+.contact-form-panel h4 {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 24px; color: var(--burgundy); margin-bottom: 18px;
+}
+.form-group { margin-bottom: 16px; display: flex; flex-direction: column; gap: 7px; }
+.form-group label {
+  font-family: 'Courier Prime', monospace; font-size: 12px;
+  letter-spacing: 1.8px; text-transform: uppercase; color: var(--burgundy);
+}
+.form-group input,
+.form-group textarea {
+  font-family: 'Montserrat', sans-serif; font-size: 14.5px;
+  padding: 12px 14px;
+  border: 1px solid var(--burgundy); border-radius: 10px;
+  background: var(--cream-2); color: var(--ink);
+  outline: none; transition: border-color .18s ease, background .18s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus { border-color: var(--rose-deep); background: var(--paper); }
+.form-group textarea { min-height: 125px; resize: vertical; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  border-top: 1px solid var(--burgundy);
+  padding: 36px clamp(24px, 5vw, 72px);
+}
+.footer-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+.footer-title {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 22px; color: var(--burgundy);
+}
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.social-pill {
+  font-family: 'Courier Prime', monospace;
+  font-size: 13px;
+  color: var(--burgundy);
+  background: var(--paper);
+  border: 1px solid var(--burgundy);
+  border-radius: 999px;
+  padding: 8px 16px;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 rgba(74, 14, 23, 0.12);
+  transition: transform .18s ease, background .18s ease, color .18s ease;
+}
+.social-pill:hover {
+  transform: translateY(-2px);
+  background: var(--burgundy);
+  color: var(--cream);
+}
+
+/* ============================================================
+   MODAL DE PROYECTO
+   ============================================================ */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(43, 26, 30, 0.62);
+  backdrop-filter: blur(4px);
+  display: none; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: var(--paper);
+  border: 1px solid var(--burgundy); border-radius: 18px;
+  max-width: 720px; width: 100%; max-height: 88vh; overflow-y: auto;
+  padding: 34px 30px 28px;
+  position: relative;
+  box-shadow: 9px 9px 0 rgba(74, 14, 23, 0.25);
+  animation: pop .22s ease;
+}
+@keyframes pop {
+  from { transform: scale(.94) translateY(10px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+.modal-close {
+  position: absolute; top: 14px; right: 16px;
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid var(--burgundy); background: var(--paper);
+  color: var(--burgundy); font-size: 16px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .18s ease, color .18s ease;
+}
+.modal-close:hover { background: var(--burgundy); color: var(--paper); }
+.modal h3 {
+  font-family: 'Playfair Display', serif; font-size: 26px;
+  color: var(--burgundy); margin-bottom: 4px; padding-right: 42px;
+}
+.modal .modal-sub {
+  font-family: 'Courier Prime', monospace; font-size: 12.5px;
+  color: var(--rose-deep); letter-spacing: 1px; margin-bottom: 14px;
+}
+.modal-divider {
+  height: 10px; margin: 14px 0 18px;
+  background-color: var(--rose-soft);
+  background-image: radial-gradient(var(--burgundy) 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+  border-radius: 999px;
+}
+.modal-body p { font-size: 14px; margin-bottom: 12px; }
+.modal-body ul { margin: 0 0 14px 20px; font-size: 14px; }
+.modal-body li { margin-bottom: 5px; }
+.modal-gallery {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 10px; margin-top: 16px;
+}
+.modal-gallery img {
+  width: 100%; height: 84px; object-fit: cover;
+  border: 1px solid var(--burgundy); border-radius: 10px;
+  cursor: zoom-in; transition: transform .18s ease;
+}
+.modal-gallery img:hover { transform: scale(1.04); }
+.modal-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+
+/* ============================================================
+   LIGHTBOX DE IMÁGENES EN LA MISMA PANTALLA
+   ============================================================ */
+.lightbox-overlay {
+  position: fixed; inset: 0; z-index: 140;
+  background: rgba(43, 26, 30, 0.84);
+  backdrop-filter: blur(7px);
+  display: none; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.lightbox-overlay.open { display: flex; animation: fadeInSimple .2s ease; }
+@keyframes fadeInSimple { from { opacity: 0; } to { opacity: 1; } }
+
+.lightbox-box {
+  background: var(--cream);
+  border: 1px solid var(--burgundy);
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  max-width: 920px; width: 100%;
+  max-height: 92vh;
+  display: flex; flex-direction: column; gap: 12px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  animation: pop .22s ease;
+}
+.lightbox-stage {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--ink);
+  border: 1px solid var(--burgundy);
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 260px;
+}
+.lightbox-stage img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+}
+.lightbox-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 42px; height: 42px; border-radius: 50%;
+  border: 1px solid var(--burgundy);
+  background: rgba(247, 241, 229, 0.92);
+  color: var(--burgundy); font-size: 22px; font-weight: 700;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background .18s ease, color .18s ease;
+}
+.lightbox-nav:hover { background: var(--burgundy); color: var(--cream); }
+.lightbox-prev { left: 12px; }
+.lightbox-next { right: 12px; }
+.lightbox-nav[hidden] { display: none; }
+
+.lightbox-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap;
+}
+.lightbox-caption {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 16px; color: var(--burgundy);
+}
+.lightbox-counter {
+  font-family: 'Courier Prime', monospace; font-size: 12px;
+  background: var(--rose-soft); color: var(--burgundy);
+  border: 1px solid var(--burgundy); border-radius: 999px;
+  padding: 3px 11px;
+}
+.lightbox-close {
+  position: absolute; top: 10px; right: 10px; z-index: 5;
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid var(--burgundy);
+  background: var(--paper); color: var(--burgundy);
+  font-size: 16px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .18s ease, color .18s ease;
+}
+.lightbox-close:hover { background: var(--burgundy); color: var(--paper); }
+</style>
+</head>
+<body>
+
+<!-- SVGs reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="icon-bow" viewBox="0 0 64 40">
+      <path d="M32 20 C20 4, 2 8, 6 20 C2 32, 20 36, 32 20 Z" fill="#C88EA7" stroke="#4A0E17" stroke-width="1.5"/>
+      <path d="M32 20 C44 4, 62 8, 58 20 C62 32, 44 36, 32 20 Z" fill="#C88EA7" stroke="#4A0E17" stroke-width="1.5"/>
+      <circle cx="32" cy="20" r="5" fill="#D9A2A8" stroke="#4A0E17" stroke-width="1.5"/>
+      <path d="M30 24 L26 38 L32 34 L38 38 L34 24 Z" fill="#D9A2A8" stroke="#4A0E17" stroke-width="1.5"/>
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24">
+      <path d="M12 1 L14.8 8.2 L22 9 L16.5 14 L18 21.5 L12 17.5 L6 21.5 L7.5 14 L2 9 L9.2 8.2 Z"
+            fill="#D9A2A8" stroke="#4A0E17" stroke-width="1"/>
+    </symbol>
+    <symbol id="icon-sparkle" viewBox="0 0 24 24">
+      <path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="#C88EA7"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============================================================
+     NAVBAR — Cada enlace abre su propia sección
+     ============================================================ -->
+<header class="navbar">
+  <div class="navbar-inner">
+    <a class="logo" href="#inicio" data-nav="inicio">
+      <span>✦</span> MELISSA · PORTAFOLIO
+    </a>
+    <nav aria-label="Menú principal">
+      <ul class="nav-links">
+        <li><a href="#inicio" data-nav="inicio" class="active">Inicio</a></li>
+        <li><a href="#habilidades" data-nav="habilidades">Habilidades</a></li>
+        <li><a href="#proyectos" data-nav="proyectos">Proyectos</a></li>
+        <li><a href="#contacto" data-nav="contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ============================================================
+       SECCIÓN 1: INICIO (QUIÉN SOY YO + MIS HABILIDADES)
+       ============================================================ -->
+  <section class="view-section active" id="view-inicio" aria-labelledby="hero-heading">
+    <div class="hero-wrap">
+      <div class="wrap">
+        <div class="hero-board reveal visible">
+          <div class="hero-left">
+            <span class="hero-badge">
+              <svg width="14" height="14"><use href="#icon-sparkle"/></svg>
+              Portafolio
+              <svg width="14" height="14"><use href="#icon-sparkle"/></svg>
+            </span>
+            <h1 id="hero-heading">Andrea <span class="and">Melissa</span><br>Mejía Cortez</h1>
+            <p class="hero-sub">Diseño · Comunicación · Proyectos con alma</p>
+            <blockquote class="hero-quote">
+              "Este es el registro de tres años aprendiendo a construir cosas — y, en el camino, a construirme a mí misma."
+            </blockquote>
+            <div class="hero-actions">
+              <a class="btn" href="#proyectos" data-nav="proyectos">Explorar proyectos →</a>
+              <a class="btn btn-ghost" href="#habilidades" data-nav="habilidades">Mis habilidades →</a>
+            </div>
+          </div>
+
+          <div class="hero-right dots-rose">
+            <div class="polaroid">
+              <span class="tape"></span>
+              <div class="polaroid-frame" data-lightbox-group="portrait" data-lightbox-index="0" tabindex="0" role="button" aria-label="Ampliar foto de Andrea Melissa">
+                <img src="Foto_Estudiante_Andrea_Mejia.jpg" alt="Andrea Melissa Mejía Cortez">
+                <span class="zoom-pill">🔍 Ver de cerca</span>
+              </div>
+              <div class="polaroid-caption">Melissa✿</div>
+            </div>
+            <div class="hero-mini-notes">
+              <span class="mini-note">★ ¡Supérate!</span>
+              <span class="mini-note">✿ Creativa &amp; Resiliente</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dot-band"></div>
+
+    <!-- BLOQUE: QUIÉN SOY YO -->
+    <div class="section-block" id="sobre-mi">
+      <div class="wrap">
+        <div class="section-title reveal">
+          <div class="bow-divider">
+            <span class="line"></span>
+            <svg width="54" height="34"><use href="#icon-bow"/></svg>
+            <span class="line"></span>
+          </div>
+          <h2>Quién soy yo</h2>
+          <p>✿ mi historia y esencia ✿</p>
+        </div>
+
+        <div class="about-split">
+          <article class="about-story dots-burgundy reveal reveal-left">
+            <h3>Un poco sobre mí</h3>
+            <p>
+              Soy Andrea Melissa Mejía Cortez, estudiante en formación con tres años de
+              experiencia creando proyectos en ¡Supérate! y en la escuela. Soy una mezcla
+              de creatividad, comunicación y capacidad de adaptación.
+            </p>
+            <p>
+              Me gusta aprender haciendo, aportar mis ideas y encontrar la manera de
+              sacar adelante cada reto, incluso cuando al principio parece difícil y
+              termina convirtiéndose en una presentación de la que me siento orgullosa.
+            </p>
+            <div class="sticker-row">
+              <span class="sticker-light">✎ aprendo haciendo</span>
+              <span class="sticker-light">✿ creatividad</span>
+              <span class="sticker-light">★ resiliencia</span>
+              <span class="sticker-light">✦ flexible</span>
+            </div>
+          </article>
+
+          <aside class="about-ficha reveal reveal-right" data-delay="1">
+            <span class="tape"></span>
+            <div class="about-ficha-header">
+              <span>Ficha Personal</span>
+              <svg width="42" height="26"><use href="#icon-bow"/></svg>
+            </div>
+            <ul class="ficha-list">
+              <li>
+                <span class="ficha-label">Nombre</span>
+                <span class="ficha-val">Andrea Melissa Mejía Cortez</span>
+              </li>
+              <li>
+                <span class="ficha-label">Trayectoria</span>
+                <span class="ficha-val">3 años en ¡Supérate! y proyectos escolares</span>
+              </li>
+              <li>
+                <span class="ficha-label">Enfoque</span>
+                <span class="ficha-val">Diseño visual, comunicación y desarrollo de ideas</span>
+              </li>
+              <li>
+                <span class="ficha-label">Cómo trabajo</span>
+                <span class="ficha-val">Cercana, honesta, colaborativa y constante</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+
+        <!-- HOBBIES Y FORTALEZAS -->
+        <div class="about-extras">
+          <article class="extras-card hobbies-card reveal" data-delay="1">
+            <span class="tape"></span>
+            <div class="extras-header">
+              <div>
+                <span class="extras-kicker">✿ lo que disfruto en mi día a día</span>
+                <h3>Mis Hobbies</h3>
+              </div>
+              <svg width="26" height="26"><use href="#icon-star"/></svg>
+            </div>
+            <div class="hobby-grid">
+              <div class="hobby-item">
+                <div class="hobby-title">✎ Escribir</div>
+                <p>Crear historias, libros y expresar mis pensamientos mediante la escritura.</p>
+              </div>
+              <div class="hobby-item">
+                <div class="hobby-title">✿ Leer</div>
+                <p>Disfrutar de historias, libros y aprender cosas nuevas.</p>
+              </div>
+              <div class="hobby-item">
+                <div class="hobby-title">✦ Diseñar y crear</div>
+                <p>Elaborar presentaciones, proyectos visuales, ideas creativas y diseños.</p>
+              </div>
+              <div class="hobby-item">
+                <div class="hobby-title">💻 Aprender sobre tecnología</div>
+                <p>Explorar herramientas digitales, informática y nuevas tecnologías.</p>
+              </div>
+              <div class="hobby-item">
+                <div class="hobby-title">♪ Escuchar música</div>
+                <p>Disfrutar de la música en mis momentos libres.</p>
+              </div>
+              <div class="hobby-item">
+                <div class="hobby-title">★ Ver películas y anime</div>
+                <p>Disfrutar de historias, personajes y diferentes mundos ficticios.</p>
+              </div>
+              <div class="hobby-item">
+                <div class="hobby-title">🔍 Explorar temas nuevos</div>
+                <p>Investigar sobre temas que despiertan mi curiosidad y aprender por mi cuenta.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="extras-card dots-rose reveal" data-delay="2">
+            <span class="tape"></span>
+            <div class="extras-header">
+              <div>
+                <span class="extras-kicker">★ lo que me define</span>
+                <h3>Mis Fortalezas</h3>
+              </div>
+              <svg width="44" height="28"><use href="#icon-bow"/></svg>
+            </div>
+            <div class="strength-list">
+              <div class="strength-item">
+                <span class="strength-badge">01</span>
+                <div>
+                  <h4>Creatividad</h4>
+                  <p>Tengo facilidad para aportar ideas, crear proyectos y expresarme de diferentes maneras.</p>
+                </div>
+              </div>
+              <div class="strength-item">
+                <span class="strength-badge">02</span>
+                <div>
+                  <h4>Resiliencia</h4>
+                  <p>Soy capaz de superar desafíos, aprender de experiencias difíciles y seguir adelante.</p>
+                </div>
+              </div>
+              <div class="strength-item">
+                <span class="strength-badge">03</span>
+                <div>
+                  <h4>Adaptabilidad</h4>
+                  <p>Puedo aprender cosas nuevas, adaptarme a diferentes situaciones y enfrentar nuevos retos.</p>
+                </div>
+              </div>
+              <div class="strength-item">
+                <span class="strength-badge">04</span>
+                <div>
+                  <h4>Responsabilidad</h4>
+                  <p>Me comprometo con mis tareas y trato de sacar adelante los proyectos que comienzo.</p>
+                </div>
+              </div>
+              <div class="strength-item">
+                <span class="strength-badge">05</span>
+                <div>
+                  <h4>Comunicación</h4>
+                  <p>He mejorado mi capacidad de expresarme, participar e interactuar con otras personas.</p>
+                </div>
+              </div>
+              <div class="strength-item">
+                <span class="strength-badge">06</span>
+                <div>
+                  <h4>Trabajo en equipo</h4>
+                  <p>Puedo colaborar, aportar ideas y trabajar con otras personas para alcanzar objetivos.</p>
+                </div>
+              </div>
+              <div class="strength-item">
+                <span class="strength-badge">07</span>
+                <div>
+                  <h4>Perseverancia</h4>
+                  <p>Aunque algo me resulte difícil al principio, intento aprender y mejorar hasta lograrlo.</p>
+                </div>
+              </div>
+              <div class="strength-item">
+                <span class="strength-badge">08</span>
+                <div>
+                  <h4>Autoconocimiento</h4>
+                  <p>Tengo la capacidad de reflexionar sobre mis experiencias, reconocer mis emociones y aprender de mí misma.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="cta-banner dots-rose reveal">
+          <div>
+            <h3>¿Quieres conocer lo que sé hacer y mis proyectos?</h3>
+            <p>Explora mis herramientas técnicas en la sección de Habilidades o mira la galería completa de mis proyectos.</p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn" href="#habilidades" data-nav="habilidades">Ver Habilidades →</a>
+            <a class="btn btn-ghost" href="#proyectos" data-nav="proyectos">Ir a Proyectos →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCIÓN 2: HABILIDADES (EN SU PROPIO LINK DEL MENÚ)
+       ============================================================ -->
+  <section class="view-section" id="view-habilidades" aria-labelledby="skills-heading">
+    <div class="section-block" id="habilidades">
+      <div class="wrap">
+        <div class="section-title reveal">
+          <div class="bow-divider">
+            <span class="line"></span>
+            <svg width="54" height="34"><use href="#icon-bow"/></svg>
+            <span class="line"></span>
+          </div>
+          <h2 id="skills-heading">Mis Habilidades</h2>
+          <p>✿ conocimientos técnicos y fortalezas personales ✿</p>
+        </div>
+
+        <div class="skills-layout">
+          <!-- Conocimientos técnicos e idiomas -->
+          <div class="tech-skills-panel dots-rose reveal reveal-left">
+            <span class="tape"></span>
+            <div class="panel-kicker">Herramientas e Idioma</div>
+            <h3>Conocimientos Base</h3>
+            <div class="tech-stack">
+              <div class="tech-item reveal" data-delay="1">
+                <div class="tech-item-top">
+                  <span class="tech-name">Inglés</span>
+                  <span class="level-pill">Nivel Básico</span>
+                </div>
+                <p>Comprensión de lectura, vocabulario básico y apoyo para presentaciones y documentación.</p>
+                <div class="skill-meter" aria-label="Nivel básico de inglés">
+                  <div class="skill-meter-fill" style="width: 42%;"></div>
+                </div>
+              </div>
+
+              <div class="tech-item reveal" data-delay="2">
+                <div class="tech-item-top">
+                  <span class="tech-name">Microsoft Excel</span>
+                  <span class="level-pill">Conocimientos Básicos</span>
+                </div>
+                <p>Organización de datos en tablas, manejo de hojas de cálculo y fórmulas esenciales.</p>
+                <div class="skill-meter" aria-label="Nivel básico de Excel">
+                  <div class="skill-meter-fill" style="width: 45%;"></div>
+                </div>
+              </div>
+
+              <div class="tech-item reveal" data-delay="3">
+                <div class="tech-item-top">
+                  <span class="tech-name">HTML &amp; CSS</span>
+                  <span class="level-pill">Conocimientos Básicos</span>
+                </div>
+                <p>Estructura de páginas web, etiquetas semánticas, paletas de color y estilos personalizados.</p>
+                <div class="skill-meter" aria-label="Nivel básico de HTML y CSS">
+                  <div class="skill-meter-fill" style="width: 48%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Habilidades creativas y blandas -->
+          <div class="soft-skills-grid">
+            <article class="skill-card reveal" data-delay="1">
+              <span class="skill-num">01</span>
+              <div class="skill-icon"><svg width="24" height="24"><use href="#icon-star"/></svg></div>
+              <h4>Diseño UI/UX &amp; Prototipado</h4>
+              <p>Interfaces pensadas para personas: flujos claros, prototipos en Figma y decisiones visuales con intención.</p>
+            </article>
+
+            <article class="skill-card reveal" data-delay="2">
+              <span class="skill-num">02</span>
+              <div class="skill-icon"><svg width="24" height="24"><use href="#icon-star"/></svg></div>
+              <h4>Branding e Identidad</h4>
+              <p>Paletas, tipografías y universos visuales que cuentan una historia coherente y reconocible.</p>
+            </article>
+
+            <article class="skill-card reveal" data-delay="3">
+              <span class="skill-num">03</span>
+              <div class="skill-icon"><svg width="24" height="24"><use href="#icon-star"/></svg></div>
+              <h4>Comunicación &amp; Equipo</h4>
+              <p>Escuchar, expresar ideas con seguridad y adaptar un proyecto para distintos tipos de público.</p>
+            </article>
+
+            <article class="skill-card reveal" data-delay="4">
+              <span class="skill-num">04</span>
+              <div class="skill-icon"><svg width="24" height="24"><use href="#icon-star"/></svg></div>
+              <h4>Desarrollo de Proyectos</h4>
+              <p>De la idea en el aula al escenario real: planificación, iteración y constancia de principio a fin.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="cta-banner dots-rose reveal">
+          <div>
+            <h3>¿Quieres conocer mis proyectos en acción?</h3>
+            <p>Descubre la galería de fotos, presentaciones y aprendizajes detrás de POT-C, Diseña tu Meta y mi libro Contexto.</p>
+          </div>
+          <a class="btn" href="#proyectos" data-nav="proyectos">Ir a Proyectos →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCIÓN 2: PROYECTOS (EN SU PROPIO LINK DEL MENÚ)
+       ============================================================ -->
+  <section class="view-section" id="view-proyectos" aria-labelledby="projects-heading">
+    <div class="section-block">
+      <div class="wrap">
+        <div class="section-title reveal">
+          <div class="bow-divider">
+            <span class="line"></span>
+            <svg width="54" height="34"><use href="#icon-bow"/></svg>
+            <span class="line"></span>
+          </div>
+          <h2 id="projects-heading">Proyectos Destacados</h2>
+          <p>✿ haz clic en cualquier foto para verla más de cerca ✿</p>
+        </div>
+
+        <p class="projects-intro reveal">
+          De los proyectos realizados a lo largo de estos 3 años en ¡Supérate! y en la escuela,
+          seleccioné cuatro que mejor representan mi crecimiento, mis habilidades y las historias que más quiero contar.
+        </p>
+
+        <div class="filter-bar reveal" role="tablist" aria-label="Filtrar proyectos">
+          <button class="filter-btn active" data-filter="all">Todos (4)</button>
+          <button class="filter-btn" data-filter="potc-logros">POT-C · Expo Logros</button>
+          <button class="filter-btn" data-filter="potc-expotech">POT-C · ExpoTech</button>
+          <button class="filter-btn" data-filter="disena-tu-meta">Diseña tu Meta</button>
+          <button class="filter-btn" data-filter="contexto-libro">Contexto · Libro</button>
+        </div>
+
+        <div class="project-showcase-list">
+
+          <!-- PROYECTO 1: POT-C EXPO LOGROS -->
+          <article class="project-showcase reveal" data-category="potc-logros">
+            <div class="project-media dots-rose">
+              <div class="main-photo-frame" data-lightbox-group="potc-logros" data-lightbox-index="0" tabindex="0" role="button" aria-label="Ampliar foto del equipo POT-C en Expo Logros">
+                <img src="img/potc-logros-equipo.jpg" alt="Equipo POT-C presentando en Expo Logros">
+                <span class="photo-caption-badge">Stand POT-C · Expo Logros</span>
+                <span class="zoom-pill">🔍 Ampliar</span>
+              </div>
+              <div class="thumb-strip">
+                <button class="thumb-btn" data-lightbox-group="potc-logros" data-lightbox-index="0" aria-label="Ver foto 1 de Expo Logros"><img src="img/potc-logros-equipo.jpg" alt="Stand Expo Logros"></button>
+                <button class="thumb-btn" data-lightbox-group="potc-logros" data-lightbox-index="1" aria-label="Ver foto 2 de Expo Logros"><img src="img/potc-logros-modelo3d.jpg" alt="Modelo 3D inicial POT-C"></button>
+                <button class="thumb-btn" data-lightbox-group="potc-logros" data-lightbox-index="2" aria-label="Ver foto 3 de Expo Logros"><img src="img/potc-logros-identidad.jpg" alt="Identidad visual POT-C"></button>
+                <button class="thumb-btn" data-lightbox-group="potc-logros" data-lightbox-index="3" aria-label="Ver foto 4 de Expo Logros"><img src="img/potc-logros-roots.jpg" alt="Equipo en escenario Roots of Legacy"></button>
+                <button class="thumb-btn" data-lightbox-group="potc-logros" data-lightbox-index="4" aria-label="Ver foto 5 de Expo Logros"><img src="img/potc-logros-generacion.jpg" alt="Foto grupal Digital Talent Project"></button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta-top">
+                <span class="tag">Expo Logros</span>
+                <span class="project-num">01</span>
+              </div>
+              <h3>POT-C — Expo Logros</h3>
+              <p class="project-desc">
+                Una propuesta creada desde el aula aplicando lo aprendido, presentada por primera
+                vez ante otras personas para explicar el proceso creativo detrás del proyecto.
+              </p>
+              <div class="project-highlights">
+                <div><strong>Objetivo:</strong> Llevar una idea desde la planificación hasta una presentación concreta en equipo.</div>
+                <div><strong>Mi rol:</strong> Aportar ideas, cumplir tareas asignadas, apoyar el desarrollo y organizar la presentación.</div>
+              </div>
+              <div class="project-skills-pills">
+                <span class="mini-pill">Trabajo en equipo</span>
+                <span class="mini-pill">Responsabilidad</span>
+                <span class="mini-pill">De principio a fin</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm" data-project="potc-logros">Leer detalle completo ✦</button>
+                <a class="btn btn-ghost btn-sm" href="https://canva.link/bfhdoq6m6anucyw" target="_blank" rel="noopener noreferrer">Presentación Canva ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 2: POT-C EXPOTECH -->
+          <article class="project-showcase reverse reveal" data-category="potc-expotech">
+            <div class="project-media dots-cream">
+              <div class="main-photo-frame" data-lightbox-group="potc-expotech" data-lightbox-index="0" tabindex="0" role="button" aria-label="Ampliar render de POT-C ExpoTech">
+                <img src="img/potc-expotech-render1.jpg" alt="Diseño exterior de POT-C para ExpoTech">
+                <span class="photo-caption-badge">Prototipo POT-C · ExpoTech</span>
+                <span class="zoom-pill">🔍 Ampliar</span>
+              </div>
+              <div class="thumb-strip">
+                <button class="thumb-btn" data-lightbox-group="potc-expotech" data-lightbox-index="0" aria-label="Ver foto 1 de ExpoTech"><img src="img/potc-expotech-render1.jpg" alt="Render exterior POT-C"></button>
+                <button class="thumb-btn" data-lightbox-group="potc-expotech" data-lightbox-index="1" aria-label="Ver foto 2 de ExpoTech"><img src="img/potc-expotech-render2.jpg" alt="Render interior mecanismo"></button>
+                <button class="thumb-btn" data-lightbox-group="potc-expotech" data-lightbox-index="2" aria-label="Ver foto 3 de ExpoTech"><img src="img/potc-expotech-app.jpg" alt="App Figma POT-C"></button>
+                <button class="thumb-btn" data-lightbox-group="potc-expotech" data-lightbox-index="3" aria-label="Ver foto 4 de ExpoTech"><img src="img/potc-expotech-stand.jpg" alt="Equipo en stand ExpoTech 2026"></button>
+                <button class="thumb-btn" data-lightbox-group="potc-expotech" data-lightbox-index="4" aria-label="Ver foto 5 de ExpoTech"><img src="img/potc-expotech-medalla.jpg" alt="Medalla Digital Talent Project"></button>
+                <button class="thumb-btn" data-lightbox-group="potc-expotech" data-lightbox-index="5" aria-label="Ver foto 6 de ExpoTech"><img src="img/potc-expotech-grupal.jpg" alt="Foto grupal ExpoTech 2026"></button>
+                <button class="thumb-btn" data-lightbox-group="potc-expotech" data-lightbox-index="6" aria-label="Ver foto 7 de ExpoTech"><img src="img/potc-expotech-auditorio.jpg" alt="Auditorio ExpoTech"></button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta-top">
+                <span class="tag tag-rose">ExpoTech Sostenible</span>
+                <span class="project-num">02</span>
+              </div>
+              <h3>POT-C — ExpoTech</h3>
+              <p class="project-desc">
+                La segunda etapa y evolución técnica de POT-C: profundizamos en cómo darle vida al
+                compostador y su app para presentarlo ante un público interesado en tecnología y ambiente.
+              </p>
+              <div class="project-highlights">
+                <div><strong>Objetivo:</strong> Fortalecer el desarrollo técnico y explicar con claridad cómo funciona y qué aporta.</div>
+                <div><strong>Mi rol:</strong> Apoyar la evolución técnica, adaptar la presentación y comunicar la información clave.</div>
+              </div>
+              <div class="project-skills-pills">
+                <span class="mini-pill">Público técnico</span>
+                <span class="mini-pill">Comunicación técnica</span>
+                <span class="mini-pill">Adaptación a retos</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm" data-project="potc-expotech">Leer detalle completo ✦</button>
+                <a class="btn btn-ghost btn-sm" href="https://canva.link/zp044b8l23ty5dx" target="_blank" rel="noopener noreferrer">Presentación ↗</a>
+                <a class="btn btn-ghost btn-sm" href="https://drive.google.com/file/d/1n-ffTNtXQXu08epOo5yHuQS-c2apu2Ud/view?usp=sharing" target="_blank" rel="noopener noreferrer">Documento Drive ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 3: DISEÑA TU META -->
+          <article class="project-showcase reveal" data-category="disena-tu-meta">
+            <div class="project-media dots-rose">
+              <div class="main-photo-frame" data-lightbox-group="disena-tu-meta" data-lightbox-index="0" tabindex="0" role="button" aria-label="Ampliar foto de Diseña tu Meta">
+                <img src="img/meta-pintura.jpg" alt="Taller creativo Valiente y Perseverante">
+                <span class="photo-caption-badge">Taller creativo · Diseña tu Meta</span>
+                <span class="zoom-pill">🔍 Ampliar</span>
+              </div>
+              <div class="thumb-strip">
+                <button class="thumb-btn" data-lightbox-group="disena-tu-meta" data-lightbox-index="0" aria-label="Ver foto 1 de Diseña tu Meta"><img src="img/meta-pintura.jpg" alt="Mural Valiente y Perseverante"></button>
+                <button class="thumb-btn" data-lightbox-group="disena-tu-meta" data-lightbox-index="1" aria-label="Ver foto 2 de Diseña tu Meta"><img src="img/meta-charla.jpg" alt="Sesión de mentoría Diseña tu Meta"></button>
+                <button class="thumb-btn" data-lightbox-group="disena-tu-meta" data-lightbox-index="2" aria-label="Ver foto 3 de Diseña tu Meta"><img src="img/meta-taller.jpg" alt="Actividad colaborativa Diseña tu Meta"></button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta-top">
+                <span class="tag">Desarrollo Personal</span>
+                <span class="project-num">03</span>
+              </div>
+              <h3>Diseña tu Meta</h3>
+              <p class="project-desc">
+                Un espacio para trabajar una meta personal y salir poco a poco de mi zona de
+                comodidad: pasé de la timidez a interactuar, participar y expresarme con seguridad.
+              </p>
+              <div class="project-highlights">
+                <div><strong>Reto superado:</strong> Dejar atrás el miedo a participar y sentirme cómoda frente a otras personas.</div>
+                <div><strong>Mi rol:</strong> Participación activa en dinámicas, aporte de ideas y trabajo continuo en mi meta.</div>
+              </div>
+              <div class="project-skills-pills">
+                <span class="mini-pill">Comunicación</span>
+                <span class="mini-pill">Seguridad al hablar</span>
+                <span class="mini-pill">Participación activa</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm" data-project="disena-tu-meta">Leer detalle completo ✦</button>
+                <a class="btn btn-ghost btn-sm" href="https://drive.google.com/file/d/1h0lUnHexSFoTMqq1SeFmNE9-Si2P3fKF/view?usp=sharing" target="_blank" rel="noopener noreferrer">Video 1 ↗</a>
+                <a class="btn btn-ghost btn-sm" href="https://drive.google.com/file/d/1Vpc3yqAgSpdNUT_iRpaXbGM67iexSdzm/view?usp=sharing" target="_blank" rel="noopener noreferrer">Video 2 ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 4: CONTEXTO — MI PROPIO LIBRO -->
+          <article class="project-showcase reverse reveal" data-category="contexto-libro">
+            <div class="project-media dots-cream">
+              <div class="main-photo-frame" data-lightbox-group="contexto-libro" data-lightbox-index="0" tabindex="0" role="button" aria-label="Ampliar foto del libro El dulce abrazo de la disciplina">
+                <img src="img/contexto-libro.jpg" alt="Portada física del libro El dulce abrazo de la disciplina por Melissa Mejía">
+                <span class="photo-caption-badge">El dulce abrazo de la disciplina</span>
+                <span class="zoom-pill">🔍 Ampliar</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta-top">
+                <span class="tag tag-rose">Editorial &amp; Redacción</span>
+                <span class="project-num">04</span>
+              </div>
+              <h3>Contexto — Mi propio libro</h3>
+              <p class="project-desc">
+                Escribir <em>"El dulce abrazo de la disciplina"</em> fue un espacio para mirar hacia atrás,
+                poner en palabras algo que durante mucho tiempo guardé y reconocer todo lo que ha cambiado en mí.
+              </p>
+              <div class="project-highlights">
+                <div><strong>Propósito:</strong> Transformar una experiencia personal en una historia propia con sentido y coherencia.</div>
+                <div><strong>Mi rol:</strong> Autora completa: idea, estructura, redacción, revisión y diseño de portada física.</div>
+              </div>
+              <div class="project-skills-pills">
+                <span class="mini-pill">Introspección</span>
+                <span class="mini-pill">Creatividad</span>
+                <span class="mini-pill">Resiliencia</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm" data-project="contexto-libro">Leer detalle completo ✦</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Reflexión del portafolio (3 columnas horizontales) -->
+        <div class="reflections-grid">
+          <div class="reflection-card reveal" data-delay="1">
+            <span class="tape"></span>
+            <h4>¿Cuáles demuestran mejor mis habilidades?</h4>
+            <p>POT-C (Expo Logros y ExpoTech), porque me permitió mostrar tanto el proceso creativo como la parte técnica y adaptarlo a dos públicos distintos.</p>
+          </div>
+          <div class="reflection-card reveal" data-delay="2">
+            <span class="tape"></span>
+            <h4>¿De cuáles me siento más orgullosa?</h4>
+            <p>De POT-C, sin duda. Presentarlo en dos escenarios diferentes y ver su evolución implicó responsabilidad, trabajo en equipo y sacarlo adelante de principio a fin.</p>
+          </div>
+          <div class="reflection-card reveal" data-delay="3">
+            <span class="tape"></span>
+            <h4>¿Qué desafíos superé?</h4>
+            <p>Con Contexto logré poner en palabras algo que no había podido decir, y con Diseña tu Meta superé el reto de comunicarme con comodidad y seguridad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCIÓN 3: CONTACTO (EN SU PROPIO LINK DEL MENÚ)
+       ============================================================ -->
+  <section class="view-section" id="view-contacto" aria-labelledby="contact-heading">
+    <div class="section-block">
+      <div class="wrap">
+        <div class="section-title reveal">
+          <div class="bow-divider">
+            <span class="line"></span>
+            <svg width="54" height="34"><use href="#icon-bow"/></svg>
+            <span class="line"></span>
+          </div>
+          <h2 id="contact-heading">Hablemos</h2>
+          <p>✿ escríbeme algo bonito o cuéntame tu idea ✿</p>
+        </div>
+
+        <div class="contact-board reveal">
+          <aside class="contact-aside dots-burgundy">
+            <div>
+              <h3>Conectemos ✿</h3>
+              <p>
+                Si te gustó mi trabajo en POT-C, Diseña tu Meta o Contexto, o quieres
+                colaborar en un proyecto creativo, ¡me encantará leerte!
+              </p>
+              <ul class="contact-details">
+                <li>✦ Instagram: @melissa.mejia_art</li>
+                <li>✿ TikTok: @melissa.crea</li>
+                <li>☎ Teléfono: +503 7412-8904</li>
+                <li>✎ Correo: andrea.melissa@portafolio.com</li>
+              </ul>
+            </div>
+            <div>
+              <a class="btn btn-ghost btn-sm" href="#proyectos" data-nav="proyectos">← Volver a Proyectos</a>
+            </div>
+          </aside>
+
+          <div class="contact-form-panel">
+            <h4>Envíame un mensaje</h4>
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required>
+              </div>
+              <div class="form-group">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Cuéntame tu idea o comentario…" required></textarea>
+              </div>
+              <button type="submit" class="btn" style="width:100%; justify-content:center;">Enviar mensaje →</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================================================
+     FOOTER — REDES SOCIALES Y CONTACTO
+     ============================================================ -->
+<footer class="footer dots-cream">
+  <div class="footer-inner">
+    <div class="footer-title">Encuéntrame en mis redes ✿</div>
+    <div class="footer-socials">
+      <a class="social-pill" href="#contacto" data-nav="contacto">Instagram: @melissa.mejia_art</a>
+      <a class="social-pill" href="#contacto" data-nav="contacto">TikTok: @melissa.crea</a>
+      <a class="social-pill" href="tel:+50374128904">Tel: +503 7412-8904</a>
+      <a class="social-pill" href="mailto:andrea.melissa@portafolio.com">andrea.melissa@portafolio.com</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     MODAL DE DETALLE DE PROYECTO
+     ============================================================ -->
+<div class="modal-overlay" id="modal-overlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Cerrar detalle">✕</button>
+    <h3 id="modal-title"></h3>
+    <div class="modal-sub" id="modal-sub"></div>
+    <div class="modal-divider"></div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-gallery" id="modal-gallery"></div>
+    <div class="modal-links" id="modal-links"></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     LIGHTBOX EN LA MISMA PANTALLA (VER IMÁGENES MÁS DE CERCA)
+     ============================================================ -->
+<div class="lightbox-overlay" id="lightbox-overlay" aria-hidden="true">
+  <div class="lightbox-box" role="dialog" aria-modal="true" aria-label="Vista ampliada de imagen">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar imagen">✕</button>
+    <div class="lightbox-stage">
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Imagen anterior">‹</button>
+      <img id="lightbox-img" src="" alt="">
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Siguiente imagen">›</button>
+    </div>
+    <div class="lightbox-footer">
+      <span class="lightbox-caption" id="lightbox-caption"></span>
+      <span class="lightbox-counter" id="lightbox-counter"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   1. GALERÍAS DE IMÁGENES PARA LIGHTBOX EN LA MISMA PANTALLA
+   ============================================================ */
+const GALLERIES = {
+  "portrait": [
+    { src: "Foto_Estudiante_Andrea_Mejia.jpg", caption: "Andrea Melissa Mejía Cortez — Portafolio 2026" }
+  ],
+  "potc-logros": [
+    { src: "img/potc-logros-equipo.jpg", caption: "Equipo POT-C en nuestro stand de Expo Logros" },
+    { src: "img/potc-logros-modelo3d.jpg", caption: "Primer modelado 3D de la estructura del compostador POT-C" },
+    { src: "img/potc-logros-identidad.jpg", caption: "Guía de identidad visual, logo y paleta de POT-C" },
+    { src: "img/potc-logros-roots.jpg", caption: "Presentación en Digital Talent Project — Roots of Legacy" },
+    { src: "img/potc-logros-generacion.jpg", caption: "Foto grupal de la generación en Expo Logros" }
+  ],
+  "potc-expotech": [
+    { src: "img/potc-expotech-render1.jpg", caption: "Render exterior del compostador POT-C en ExpoTech" },
+    { src: "img/potc-expotech-render2.jpg", caption: "Render interior del mecanismo y ventilación de POT-C" },
+    { src: "img/potc-expotech-app.jpg", caption: "Prototipo de la app móvil POT-C diseñada en Figma" },
+    { src: "img/potc-expotech-stand.jpg", caption: "Equipo en el stand durante ExpoTech 2026" },
+    { src: "img/potc-expotech-medalla.jpg", caption: "Medalla de reconocimiento — Digital Talent Project" },
+    { src: "img/potc-expotech-grupal.jpg", caption: "Foto general de participantes en ExpoTech 2026" },
+    { src: "img/potc-expotech-auditorio.jpg", caption: "Público en el auditorio durante las presentaciones de ExpoTech" }
+  ],
+  "disena-tu-meta": [
+    { src: "img/meta-pintura.jpg", caption: "Taller creativo 'Valiente y Perseverante' — Diseña tu Meta" },
+    { src: "img/meta-charla.jpg", caption: "Sesión de mentoría y expresión en Diseña tu Meta" },
+    { src: "img/meta-taller.jpg", caption: "Dinámica colaborativa junto a compañeras en el proyecto" }
+  ],
+  "contexto-libro": [
+    { src: "img/contexto-libro.jpg", caption: "Portada física de mi libro: 'El dulce abrazo de la disciplina'" }
+  ]
+};
+
+/* ============================================================
+   2. DATOS DETALLADOS DE PROYECTOS (MODAL)
+   ============================================================ */
+const PROJECTS = {
+  "potc-logros": {
+    title: "POT-C — Expo Logros",
+    sub: "PROYECTO 01 · EXPO LOGROS",
+    gallery: "potc-logros",
+    body: `
+      <p><strong>Descripción:</strong> POT-C fue un proyecto en el que trabajamos para desarrollar y presentar una propuesta creada desde el aula, aplicando los conocimientos y habilidades adquiridos. En Expo Logros mostramos nuestro trabajo por primera vez ante otras personas y explicamos el proceso detrás del proyecto.</p>
+      <p><strong>Objetivo del proyecto:</strong> Llevar una idea desde su planificación hasta una presentación concreta, aprendiendo a organizarnos como equipo, asumir responsabilidades y encontrar soluciones.</p>
+      <p><strong>Problema que resolvimos:</strong> Responder a una necesidad identificada durante el desarrollo, planteando una solución mediante creatividad, trabajo en equipo y aplicación de conocimientos.</p>
+      <p><strong>Mi rol:</strong> Cumplir con las tareas asignadas, aportar ideas, apoyar en el desarrollo y participar en la organización para presentar nuestro trabajo de manera clara.</p>
+      <ul>
+        <li>✿ Trabajo en equipo</li>
+        <li>✿ Responsabilidad</li>
+        <li>✿ Capacidad de sacar adelante un proyecto de principio a fin</li>
+      </ul>
+    `,
+    links: [
+      { label: "Ver Presentación en Canva ↗", url: "https://canva.link/bfhdoq6m6anucyw" }
+    ]
+  },
+  "potc-expotech": {
+    title: "POT-C — ExpoTech",
+    sub: "PROYECTO 02 · EXPOTECH SOSTENIBLE",
+    gallery: "potc-expotech",
+    body: `
+      <p><strong>Descripción:</strong> Después de Expo Logros, POT-C evolucionó hasta llegar a ExpoTech. En esta segunda etapa profundizamos en el proyecto, mejoramos aspectos clave y presentamos nuestro trabajo desde una perspectiva más técnica y enfocada en la tecnología.</p>
+      <p><strong>Objetivo del proyecto:</strong> Demostrar cómo podía crecer y mejorar nuestro proyecto al llevarlo a un espacio más técnico, fortaleciendo tanto su desarrollo como nuestra capacidad para explicar cómo funcionaba y qué aportaba.</p>
+      <p><strong>Problema que resolvimos:</strong> Enfrentar el reto de darle vida técnica al proyecto y adaptarlo para ser comprendido por un público con mayor interés tecnológico y ambiental.</p>
+      <p><strong>Mi rol:</strong> Apoyar el desarrollo continuo, adaptarme a nuevas necesidades, preparar la presentación y comunicar la información técnica durante ExpoTech.</p>
+      <ul>
+        <li>✿ Adaptación de un proyecto a un público técnico</li>
+        <li>✿ Crecimiento y evolución del trabajo propio</li>
+        <li>✿ Comunicación técnica y adaptación a nuevos retos</li>
+      </ul>
+    `,
+    links: [
+      { label: "Ver Presentación ↗", url: "https://canva.link/zp044b8l23ty5dx" },
+      { label: "Ver Documento Drive ↗", url: "https://drive.google.com/file/d/1n-ffTNtXQXu08epOo5yHuQS-c2apu2Ud/view?usp=sharing" }
+    ]
+  },
+  "disena-tu-meta": {
+    title: "Diseña tu Meta",
+    sub: "PROYECTO 03 · DESARROLLO PERSONAL",
+    gallery: "disena-tu-meta",
+    body: `
+      <p><strong>Descripción:</strong> Diseña tu Meta fue un proyecto enfocado en trabajar una meta personal y reconocer los pasos necesarios para alcanzarla. Me permitió salir poco a poco de mi zona de comodidad y aprender a desenvolverme mejor con otras personas.</p>
+      <p><strong>Objetivo personal:</strong> Mejorar mi comunicación, participar más e interactuar con otras personas con mayor seguridad, sin limitarme por la timidez.</p>
+      <p><strong>Reto que superé:</strong> Antes me costaba interactuar y participar; en este espacio logré soltarme, expresarme mejor y desenvolverme de una forma de la que hoy me siento orgullosa.</p>
+      <p><strong>Mi rol:</strong> Participación activa en las dinámicas, aporte de ideas, interacción con compañeros y compromiso con mi meta.</p>
+      <ul>
+        <li>✿ Comunicación asertiva y seguridad personal</li>
+        <li>✿ Expresión ante otros sin miedo a participar</li>
+      </ul>
+    `,
+    links: [
+      { label: "Ver Video 1 ↗", url: "https://drive.google.com/file/d/1h0lUnHexSFoTMqq1SeFmNE9-Si2P3fKF/view?usp=sharing" },
+      { label: "Ver Video 2 ↗", url: "https://drive.google.com/file/d/1Vpc3yqAgSpdNUT_iRpaXbGM67iexSdzm/view?usp=sharing" }
+    ]
+  },
+  "contexto-libro": {
+    title: "Contexto — Mi propio libro",
+    sub: "PROYECTO 04 · EDITORIAL & REDACCIÓN",
+    gallery: "contexto-libro",
+    body: `
+      <p><strong>Descripción:</strong> Contexto fue el proyecto de escribir mi propio libro, <em>"El dulce abrazo de la disciplina"</em>. Más que un ejercicio de escritura, fue un espacio para mirar hacia atrás y reconocer todo lo que ha cambiado en mí.</p>
+      <p><strong>Objetivo del proyecto:</strong> Transformar una experiencia personal en una historia expresada con mis propias palabras, reflexionando sobre mi proceso.</p>
+      <p><strong>Desafío que superé:</strong> Logré poner en palabras algo que durante mucho tiempo no había podido decir, reconociendo cuánto he crecido desde entonces.</p>
+      <p><strong>Mi rol:</strong> Autora completa: construir la historia, organizar ideas, redactar, revisar para dar coherencia y diseñar el resultado desde mi propia perspectiva.</p>
+      <ul>
+        <li>✿ Introspección y resiliencia</li>
+        <li>✿ Creatividad y escritura personal</li>
+        <li>✿ Capacidad de transformar experiencias en algo propio</li>
+      </ul>
+    `,
+    links: []
+  }
+};
+
+/* ============================================================
+   3. NAVEGACIÓN POR VISTAS (INICIO / PROYECTOS / CONTACTO)
+   ============================================================ */
+const views = {
+  inicio: document.getElementById("view-inicio"),
+  habilidades: document.getElementById("view-habilidades"),
+  proyectos: document.getElementById("view-proyectos"),
+  contacto: document.getElementById("view-contacto")
+};
+const navLinks = document.querySelectorAll("[data-nav]");
+
+function switchView(target, scrollTargetId = null, updateHash = true) {
+  if (!views[target]) target = "inicio";
+
+  Object.keys(views).forEach(key => {
+    views[key].classList.toggle("active", key === target);
+  });
+
+  document.querySelectorAll(".nav-links a[data-nav]").forEach(link => {
+    link.classList.toggle("active", link.dataset.nav === target);
+  });
+
+  if (updateHash) {
+    history.replaceState(null, "", "#" + target);
+  }
+
+  if (scrollTargetId) {
+    requestAnimationFrame(() => {
+      const el = document.getElementById(scrollTargetId);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  } else {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // Re-evaluar animaciones scroll reveal en la nueva vista
+  requestAnimationFrame(() => observeReveals(views[target]));
+}
+
+navLinks.forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    switchView(link.dataset.nav);
+  });
+});
+
+document.querySelectorAll("[data-scroll]").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    switchView("inicio", btn.dataset.scroll, false);
+  });
+});
+
+window.addEventListener("hashchange", () => {
+  const hash = location.hash.replace("#", "");
+  if (hash === "sobre-mi") {
+    switchView("inicio", hash, false);
+  } else if (views[hash]) {
+    switchView(hash, null, false);
+  }
+});
+
+/* ============================================================
+   4. SCROLL REVEAL (APARECE SUAVEMENTE AL DESLIZAR)
+   ============================================================ */
+let revealObserver = null;
+
+function observeReveals(scope = document) {
+  const targets = scope.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    targets.forEach(el => el.classList.add("visible"));
+    return;
+  }
+
+  if (revealObserver) revealObserver.disconnect();
+
+  revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -40px 0px"
+  });
+
+  targets.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
+      el.classList.add("visible");
+    } else if (!el.classList.contains("visible")) {
+      revealObserver.observe(el);
+    }
+  });
+}
+
+/* ============================================================
+   5. FILTRO DE PROYECTOS
+   ============================================================ */
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-showcase");
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const filter = btn.dataset.filter;
+    filterButtons.forEach(b => b.classList.toggle("active", b === btn));
+    projectCards.forEach(card => {
+      const match = filter === "all" || card.dataset.category === filter;
+      card.classList.toggle("is-hidden", !match);
+      if (match) card.classList.add("visible");
+    });
+  });
+});
+
+/* ============================================================
+   6. MODAL DE DETALLE DE PROYECTO
+   ============================================================ */
+const modalOverlay = document.getElementById("modal-overlay");
+const modalTitle = document.getElementById("modal-title");
+const modalSub = document.getElementById("modal-sub");
+const modalBody = document.getElementById("modal-body");
+const modalGallery = document.getElementById("modal-gallery");
+const modalLinks = document.getElementById("modal-links");
+const modalClose = document.getElementById("modal-close");
+
+function openProjectModal(key) {
+  const p = PROJECTS[key];
+  if (!p) return;
+  modalTitle.textContent = p.title;
+  modalSub.textContent = p.sub;
+  modalBody.innerHTML = p.body;
+
+  const imgs = GALLERIES[p.gallery] || [];
+  modalGallery.innerHTML = imgs.map((item, idx) =>
+    `<img src="${item.src}" alt="${item.caption}" data-lightbox-group="${p.gallery}" data-lightbox-index="${idx}" title="Clic para ver más de cerca">`
+  ).join("");
+
+  modalLinks.innerHTML = p.links
+    .map(l => `<a class="btn btn-ghost btn-sm" href="${l.url}" target="_blank" rel="noopener noreferrer">${l.label}</a>`)
+    .join("");
+
+  modalOverlay.classList.add("open");
+  modalOverlay.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  modalClose.focus();
+}
+
+function closeProjectModal() {
+  modalOverlay.classList.remove("open");
+  modalOverlay.setAttribute("aria-hidden", "true");
+  if (!lightboxOverlay.classList.contains("open")) {
+    document.body.style.overflow = "";
+  }
+}
+
+document.querySelectorAll("[data-project]").forEach(btn => {
+  btn.addEventListener("click", () => openProjectModal(btn.dataset.project));
+});
+modalClose.addEventListener("click", closeProjectModal);
+modalOverlay.addEventListener("click", e => { if (e.target === modalOverlay) closeProjectModal(); });
+
+/* ============================================================
+   7. LIGHTBOX DE IMÁGENES EN LA MISMA PANTALLA
+   ============================================================ */
+const lightboxOverlay = document.getElementById("lightbox-overlay");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxCaption = document.getElementById("lightbox-caption");
+const lightboxCounter = document.getElementById("lightbox-counter");
+const lightboxPrev = document.getElementById("lightbox-prev");
+const lightboxNext = document.getElementById("lightbox-next");
+const lightboxClose = document.getElementById("lightbox-close");
+
+let currentGroup = [];
+let currentIndex = 0;
+
+function renderLightbox() {
+  const item = currentGroup[currentIndex];
+  if (!item) return;
+  lightboxImg.src = item.src;
+  lightboxImg.alt = item.caption;
+  lightboxCaption.textContent = item.caption;
+  lightboxCounter.textContent = `${currentIndex + 1} / ${currentGroup.length}`;
+  const single = currentGroup.length <= 1;
+  lightboxPrev.hidden = single;
+  lightboxNext.hidden = single;
+}
+
+function openLightbox(groupKey, index) {
+  const list = GALLERIES[groupKey];
+  if (!list || !list.length) return;
+  currentGroup = list;
+  currentIndex = Math.max(0, Math.min(index, list.length - 1));
+  renderLightbox();
+  lightboxOverlay.classList.add("open");
+  lightboxOverlay.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  lightboxClose.focus();
+}
+
+function closeLightbox() {
+  lightboxOverlay.classList.remove("open");
+  lightboxOverlay.setAttribute("aria-hidden", "true");
+  if (!modalOverlay.classList.contains("open")) {
+    document.body.style.overflow = "";
+  }
+}
+
+function stepLightbox(delta) {
+  if (currentGroup.length <= 1) return;
+  currentIndex = (currentIndex + delta + currentGroup.length) % currentGroup.length;
+  renderLightbox();
+}
+
+document.addEventListener("click", e => {
+  const trigger = e.target.closest("[data-lightbox-group]");
+  if (!trigger) return;
+  const group = trigger.dataset.lightboxGroup;
+  const idx = parseInt(trigger.dataset.lightboxIndex || "0", 10);
+  openLightbox(group, idx);
+});
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Enter" || e.key === " ") {
+    const trigger = document.activeElement?.closest?.("[data-lightbox-group]");
+    if (trigger) {
+      e.preventDefault();
+      openLightbox(trigger.dataset.lightboxGroup, parseInt(trigger.dataset.lightboxIndex || "0", 10));
+      return;
+    }
+  }
+  if (lightboxOverlay.classList.contains("open")) {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") stepLightbox(-1);
+    if (e.key === "ArrowRight") stepLightbox(1);
+    return;
+  }
+  if (e.key === "Escape" && modalOverlay.classList.contains("open")) {
+    closeProjectModal();
+  }
+});
+
+lightboxPrev.addEventListener("click", () => stepLightbox(-1));
+lightboxNext.addEventListener("click", () => stepLightbox(1));
+lightboxClose.addEventListener("click", closeLightbox);
+lightboxOverlay.addEventListener("click", e => { if (e.target === lightboxOverlay) closeLightbox(); });
+
+/* ============================================================
+   8. FORMULARIO DE CONTACTO
+   ============================================================ */
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const btn = this.querySelector("button[type=submit]");
+  btn.textContent = "✿ ¡Mensaje enviado!";
+  btn.style.background = "#C88EA7";
+  setTimeout(() => {
+    btn.textContent = "Enviar mensaje →";
+    btn.style.background = "";
+    this.reset();
+  }, 2600);
+});
+
+/* ============================================================
+   9. INICIALIZACIÓN
+   ============================================================ */
+(function init() {
+  const hash = location.hash.replace("#", "");
+  if (hash === "sobre-mi") {
+    switchView("inicio", hash, false);
+  } else if (views[hash]) {
+    switchView(hash, null, false);
+  } else {
+    observeReveals(views.inicio);
+  }
+})();
+</script>
+</body>
+</html>
